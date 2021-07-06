@@ -1,0 +1,3 @@
+rootProject.name = "MyTivi+TestSDK"
+include ':app'
+include ':MyTivi'
