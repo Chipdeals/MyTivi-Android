@@ -245,81 +245,81 @@ public class MainActivity extends AppCompatActivity implements OnSubscriptionFin
 
 ### Les méthodes de l'objet bouquet
 
-> <u>MyTivi</u>: Il s'agit de l'objet pricipale qui permet d'effectuer les differentes opérations
-> ```java
-> myTivi.init(String apiKey, Context context); // Initialise l'objet MyTiviplus avec l'api key
-> myTivi.getInstance(); // Retourne l'instance MyTivi qui a été initialisée
-> myTivi.getApiKey(); // Retourne l'api key utilisé pour l'initialisation
-> myTivi.getBouquets(IEvent onBouquetEvent); // Lance la récupération de la liste des bouquets
-> myTivi.getChannels(String bouquetName, IEvent channelEvent); // Lancce la récupération de la liste des chaines d'un bouquet
-> myTivi.subscribe(SubscriptionInfo subscriptionInfo, IEvent subscriptionEvent); // Lance l'abonenemnt d'un client 
-> myTivi.getSubscriptionStatus(String subscriptionReference, IEvent subscriptionEvent); // Lance la récupération du status d'un abonnement
-> myTivi.getPendingSubscriptions(); // Retourne la liste d'abonnement en attente de réponse
-> ```
+<u>MyTivi</u>: Il s'agit de l'objet pricipale qui permet d'effectuer les differentes opérations
+```java
+myTivi.init(String apiKey, Context context); // Initialise l'objet MyTiviplus avec l'api key
+myTivi.getInstance(); // Retourne l'instance MyTivi qui a été initialisée
+myTivi.getApiKey(); // Retourne l'api key utilisé pour l'initialisation
+myTivi.getBouquets(IEvent onBouquetEvent); // Lance la récupération de la liste des bouquets
+myTivi.getChannels(String bouquetName, IEvent channelEvent); // Lancce la récupération de la liste des chaines d'un bouquet
+myTivi.subscribe(SubscriptionInfo subscriptionInfo, IEvent subscriptionEvent); // Lance l'abonenemnt d'un client 
+myTivi.getSubscriptionStatus(String subscriptionReference, IEvent subscriptionEvent); // Lance la récupération du status d'un abonnement
+myTivi.getPendingSubscriptions(); // Retourne la liste d'abonnement en attente de réponse
+```
 
-> <u>Bouquet</u>: Contient les informations d'un bouquet Canal+
-> ```java
-> bouquet.getName(); // Retourne le nom du bouquet
-> bouquet.getDescription(); // Retourne la description du bouquet
-> bouquet.getTagLine(); // Retourne le slogan du bouquet
-> bouquet.getTimezonesInSecond(); // Retourne l'écart d'heure en seconde du pays du bouquet par rapport au GMT
-> bouquet.HaveAdultOption(); // Retourne l'inclusion des chaines réservées aux adultes
-> bouquet.haveCanalPlus(); // Retourne l'inclusion des chaines CANAL+
-> bouquet.haveMyCanal(); // Retourne S'il est possible d'avoir les chaînes de ce bouquet dans l'application myCanal
-> bouquet.getBouquetIllustrationUrl(); // Retourne l'url de l'image d'illustration du bouquet
-> bouquet.getCountry(); // Retourne un objet Country qui décris le pays auquel est lié le bouquet.
-> bouquet.getPrice(); // Retourne un Objet Price qui contient le prix du bouquet.
-> bouquet.getSampleChannels(); // Retourne un Tableau d'objets Channel qui donne quelques examples de chaînes mises en avant par ce bouquet.
-> ```
+<u>Bouquet</u>: Contient les informations d'un bouquet Canal+
+```java
+bouquet.getName(); // Retourne le nom du bouquet
+bouquet.getDescription(); // Retourne la description du bouquet
+bouquet.getTagLine(); // Retourne le slogan du bouquet
+bouquet.getTimezonesInSecond(); // Retourne l'écart d'heure en seconde du pays du bouquet par rapport au GMT
+bouquet.HaveAdultOption(); // Retourne l'inclusion des chaines réservées aux adultes
+bouquet.haveCanalPlus(); // Retourne l'inclusion des chaines CANAL+
+bouquet.haveMyCanal(); // Retourne S'il est possible d'avoir les chaînes de ce bouquet dans l'application myCanal
+bouquet.getBouquetIllustrationUrl(); // Retourne l'url de l'image d'illustration du bouquet
+bouquet.getCountry(); // Retourne un objet Country qui décris le pays auquel est lié le bouquet.
+bouquet.getPrice(); // Retourne un Objet Price qui contient le prix du bouquet.
+bouquet.getSampleChannels(); // Retourne un Tableau d'objets Channel qui donne quelques examples de chaînes mises en avant par ce bouquet.
+```
 
-> <u>Country:</u> Décris le pays auquel est lié un bouquet
-> ```java
-> country.getCountryCode(); // Retourne le code à 2 caractères du pays auquel est lié le bouquet
-> country.getCountryName(); // Retourne le nom du pays auquel est lié le bouquet
-> ```
+<u>Country:</u> Décris le pays auquel est lié un bouquet
+```java
+country.getCountryCode(); // Retourne le code à 2 caractères du pays auquel est lié le bouquet
+country.getCountryName(); // Retourne le nom du pays auquel est lié le bouquet
+```
 
-> <u>Price:</u> Contiens les informations liées aux prix du bouquet
-> ```java
-> price.getAmount(); // Retourne le montant unitaire d'un abonnement à ce bouquet
-> price.getUnit(); // Retourne la durée unitaire de l'abonnement
-> price.getCurrency(); // Retourne les informations liées à la devise du pays de l'abonnement
-> ```
+<u>Price:</u> Contiens les informations liées aux prix du bouquet
+```java
+price.getAmount(); // Retourne le montant unitaire d'un abonnement à ce bouquet
+price.getUnit(); // Retourne la durée unitaire de l'abonnement
+price.getCurrency(); // Retourne les informations liées à la devise du pays de l'abonnement
+```
 
-> <u>Currency:</u> Contiens les informations relactives à la du pays de l'abonnement
-> ```java
-> currency.getCode(); // Retourne le code ISO de la devise
-> currency.getName(); // Retourne le nom de la devise
-> currency.getSymbol(); // Retourne le symbole de la devise
-> ```
+<u>Currency:</u> Contiens les informations relactives à la du pays de l'abonnement
+```java
+currency.getCode(); // Retourne le code ISO de la devise
+currency.getName(); // Retourne le nom de la devise
+currency.getSymbol(); // Retourne le symbole de la devise
+```
 
-> <u>Channel:</u> contenant toutes les informations d'une chaîne
-> ```java
-> channel.getName(); // Retourne le nom de la chaîne
-> channel.getThematic(); // Retourne le sujet autour duquel se concentre la chaîne
-> channel.getZapNumber(); // Retourne le numéro de la chaîne sur le décodeur
-> channel.getLogoUrl(); // Retourne l'url du logo pour thême normal de la chaîne
-> channel.getLogoBlackUrl(); // Retourne l'url du logo pour thême sombre de la chaîne
-> ```
+<u>Channel:</u> contenant toutes les informations d'une chaîne
+```java
+channel.getName(); // Retourne le nom de la chaîne
+channel.getThematic(); // Retourne le sujet autour duquel se concentre la chaîne
+channel.getZapNumber(); // Retourne le numéro de la chaîne sur le décodeur
+channel.getLogoUrl(); // Retourne l'url du logo pour thême normal de la chaîne
+channel.getLogoBlackUrl(); // Retourne l'url du logo pour thême sombre de la chaîne
+```
 
-> <u>SubscribtionStatus:</u> Contiens les informations relatives au status d'un abonnement
-> ```java
-> subscriptionStatus.getBouquetName(); // Retourne le nom du bouquet auquel a souscri le client
-> subscriptionStatus.getNoCard(); // Retourne le numéro de la carte du décodeur sur lequel est fait l'abonnement
-> subscriptionStatus.getDate(); // Retourne retourne la date à laquelle l'abonnement est fait
-> subscriptionStatus.getPrice(); // Retourne l'objet PriceInfo qui contient les information relatives au prix de l'abonnement lancé
-> subscriptionStatus.getSubscriptionReference(); // Retourne le code qui permet d'itentifier avec unicité un abonnement
-> subscriptionStatus.getUserPaymentStatus(); // Retourne du paiement de l'utilisateur. Contient les valeurs: "success" ou "pending" ou "error".
-> subscriptionStatus.getSubscriptionStatus(); // Retourne l'état de l'abonnement de l'utilisateur. Contient les valeurs: "success" ou "pending" ou "error".
-> subscriptionStatus.getStatusCodeMessage(); // Retourne un message qui informe sur l'état précis de l'abonnement.
-> subscriptionStatus.getStatusCode(); // Retourne un code qui informe sur l'état précis de l'abonnement. Voir plus bas pour plus de description
-> ```
+<u>SubscribtionStatus:</u> Contiens les informations relatives au status d'un abonnement
+```java
+subscriptionStatus.getBouquetName(); // Retourne le nom du bouquet auquel a souscri le client
+subscriptionStatus.getNoCard(); // Retourne le numéro de la carte du décodeur sur lequel est fait l'abonnement
+subscriptionStatus.getDate(); // Retourne retourne la date à laquelle l'abonnement est fait
+subscriptionStatus.getPrice(); // Retourne l'objet PriceInfo qui contient les information relatives au prix de l'abonnement lancé
+subscriptionStatus.getSubscriptionReference(); // Retourne le code qui permet d'itentifier avec unicité un abonnement
+subscriptionStatus.getUserPaymentStatus(); // Retourne du paiement de l'utilisateur. Contient les valeurs: "success" ou "pending" ou "error".
+subscriptionStatus.getSubscriptionStatus(); // Retourne l'état de l'abonnement de l'utilisateur. Contient les valeurs: "success" ou "pending" ou "error".
+subscriptionStatus.getStatusCodeMessage(); // Retourne un message qui informe sur l'état précis de l'abonnement.
+subscriptionStatus.getStatusCode(); // Retourne un code qui informe sur l'état précis de l'abonnement. Voir plus bas pour plus de description
+```
 
-> <u>PriceInfo:</u> Contiens les information relatives au prix de l'abonnement lancé
-> ```java
-> channel.getDurationInMonth(); // Retourne la durée mensuelle de l'abonnement lancé
-> channel.getAmount(); // Retourne le montant de l'abonnement.
-> channel.getCurrency(); // Retourne la devise du pays de l'abonnement.
-> ```
+<u>PriceInfo:</u> Contiens les information relatives au prix de l'abonnement lancé
+```java
+channel.getDurationInMonth(); // Retourne la durée mensuelle de l'abonnement lancé
+channel.getAmount(); // Retourne le montant de l'abonnement.
+channel.getCurrency(); // Retourne la devise du pays de l'abonnement.
+```
 
 
 
