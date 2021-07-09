@@ -2,19 +2,21 @@
 # Mytivi+ Android Library
 
 ## À propos Mytivi+ Android Library
-Bienvenue dans la documentation pour les développeurs Mytivi+ Android. Récupérez les bouquets, la liste des chaînes Canal+ par bouquet et (re)abonnez vos clients.
+Bienvenue dans la documentation pour les développeurs Mytivi+ Android. Devéloppez des
+applications android qui intéreagissent avec Canal+. Récupérez les bouquets, la liste des
+chaînes, et les programmes Canal+ par bouquet et (re)abonnez vos clients.
 
 ## Utiliser Mytivi+ dans votre application 
 
 Ajouter ceci dans votre fichier  *build.gradle*
 ```groovy
-implementation 'me.chipdeals.mytiti:mytivi-android:0.0.1'
+implementation 'me.chipdeals.mytivi:mytivi-android:0.0.1'
 ```
-N'oublier pas d'ajouter la permission  internet dans le manifest si ce n'est fait
+N'oubliez pas d'ajouter la permission  internet dans le manifest si ce n'est fait
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 ```
-Dans l'activité qui utilise MyTivi, initialiser le SDK dans la méthode onCreate() :
+Dans l'activité qui utilise MyTivi, initialisez le SDK dans la méthode onCreate() :
 ```java
 myTivi = MyTivi.init("<API_KEY>", this.getBaseContext());
 ```
@@ -243,7 +245,7 @@ public class MainActivity extends AppCompatActivity implements OnSubscriptionFin
 <br/>
 <br/>
 
-### Les méthodes de l'objet bouquet
+### Listes des méthodes
 
 <u>MyTivi</u>: Il s'agit de l'objet pricipale qui permet d'effectuer les differentes opérations
 ```java
